@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --border-color: rgba(226, 232, 240, 0.9);
+  }
+  .dark {
+    --bg-primary: #090d16;
+    --card-bg: rgba(15, 23, 42, 0.92);
+    --border-color: rgba(51, 65, 85, 0.7);
+  }
+}
+
+html, body {
+  min-height: 100%;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.65);
+  }
+}
+
+.glow-cyan {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.biometric-scanner-line {
+  animation: scanline 1.8s infinite ease-in-out alternate;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

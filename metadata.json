@@ -1,0 +1,8 @@
+{
+  "name": "Remix Hydrodemand Pro - Water Demand \u0026 Engineering Calculator",
+  "description": "Professional hydraulic engineering suite for water demand assessment, treatment plant sizing, pump duty calculation, and pipe reach hydraulics with offline sync and biometric security.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
